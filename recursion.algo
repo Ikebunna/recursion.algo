@@ -1,0 +1,24 @@
+FUNCTION IsPalindrome(word:STRING) : STRING
+VAR
+// declearing all my variables to be use
+    newWord : STRING;  
+    firstLetter : CHAR;
+    lastLetter : CHAR; 
+    n : INTEGER: word.length;
+    BEGIN
+    IF (n = 0 or n = 1) THEN
+        return "is Palindrome" 
+    END_IF
+    // Checking if  characters are the same
+    firstLetter = word[0]
+    lastLetter = word[n - 1]
+    IF (firstLetter = lastLetter) THEN
+        FOR i FROM 1 TO n - 2 STEP step  DO
+            newWord[i - 1] = word[i]  // 
+        END_FOR
+        return IsPalindrome(newWord)  
+    ELSE
+        return "is not Palindrome"  
+    END_IF
+    
+END

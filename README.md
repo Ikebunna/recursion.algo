@@ -1,0 +1,1 @@
+The Is palindrome function is used to check if words when reversed will give you the same exact input that was used.
